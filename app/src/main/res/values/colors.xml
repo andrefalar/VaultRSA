@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="red">#FF0000</color>
+
+    <!-- Primary Palette -->
+    <color name="primary">#121C24</color>
+    <color name="primaryDark">#F5C754</color>
+
+    <!-- Secondary Palette -->
+    <color name="secondary">#F7FAFA</color>
+    <color name="secondaryDark">#29384D</color>
+
+    <!-- Neutral Palette -->
+    <color name="textColorPrimary">#F7FAFA</color>
+    <color name="textColorSecondary">#8A9EBF</color>
+    <color name="textColorTertiary">#141C24</color>
+
+</resources>
