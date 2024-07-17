@@ -20,4 +20,9 @@
         android:name="com.andrefalar.vaultrsa.ui.vault.VaultFragment"
         android:label="fragment_vault"
         tools:layout="@layout/fragment_vault" />
+    <fragment
+        android:id="@+id/fragmentRsaInfo"
+        android:name="com.andrefalar.vaultrsa.ui.rsa_info.FragmentRsaInfo"
+        android:label="fragment_rsa_info"
+        tools:layout="@layout/fragment_rsa_info" />
 </navigation>

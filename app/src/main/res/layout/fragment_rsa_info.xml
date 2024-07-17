@@ -3,8 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.vault.VaultFragment"
-    tools:background="@color/red">
+    tools:context=".ui.rsa_info.FragmentRsaInfo">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView

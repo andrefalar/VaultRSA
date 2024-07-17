@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/vaultFragment"
+        android:title="@string/vault"/>
+
+    <item
+        android:id="@+id/generatorFragment"
+        android:title="@string/generator"/>
+
+    <item
+        android:id="@+id/fragmentRsaInfo"
+        android:title="@string/rsa_info"/>
+
+    <item
+        android:id="@+id/settingsFragment"
+        android:title="@string/setting"/>
+
+
+</menu>

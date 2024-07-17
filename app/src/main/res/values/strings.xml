@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">VaultRSA</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="vault">Vault</string>
+    <string name="generator">Generator</string>
+    <string name="rsa_info">RSA Info</string>
+    <string name="setting">Settings</string>
+
 </resources>
