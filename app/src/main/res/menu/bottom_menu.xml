@@ -2,19 +2,22 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/vaultFragment"
-        android:title="@string/vault"/>
+        android:title="@string/vault"
+        android:icon="@drawable/ic_vault"/>
 
     <item
         android:id="@+id/generatorFragment"
-        android:title="@string/generator"/>
+        android:title="@string/generator"
+        android:icon="@drawable/ic_generator"/>
 
     <item
-        android:id="@+id/fragmentRsaInfo"
-        android:title="@string/rsa_info"/>
+        android:id="@+id/rsaInfoFragment"
+        android:title="@string/rsa_info"
+        android:icon="@drawable/ic_rsa_info"/>
 
     <item
         android:id="@+id/settingsFragment"
-        android:title="@string/setting"/>
-
+        android:title="@string/setting"
+        android:icon="@drawable/ic_settings"/>
 
 </menu>

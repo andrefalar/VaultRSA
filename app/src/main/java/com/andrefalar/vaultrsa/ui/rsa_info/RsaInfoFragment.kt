@@ -5,10 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.andrefalar.vaultrsa.R
 import com.andrefalar.vaultrsa.databinding.FragmentRsaInfoBinding
 
-class FragmentRsaInfo : Fragment() {
+class RsaInfoFragment : Fragment() {
 
     private var _binding: FragmentRsaInfoBinding? = null
     private val binding get() = _binding!!
