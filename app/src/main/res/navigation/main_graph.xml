@@ -8,22 +8,22 @@
     <fragment
         android:id="@+id/generatorFragment"
         android:name="com.andrefalar.vaultrsa.ui.generator.GeneratorFragment"
-        android:label="fragment_generator"
+        android:label="@string/generator"
         tools:layout="@layout/fragment_generator" />
     <fragment
         android:id="@+id/settingsFragment"
         android:name="com.andrefalar.vaultrsa.ui.settings.SettingsFragment"
-        android:label="fragment_settings"
+        android:label="@string/settings"
         tools:layout="@layout/fragment_settings" />
     <fragment
         android:id="@+id/vaultFragment"
         android:name="com.andrefalar.vaultrsa.ui.vault.VaultFragment"
-        android:label="fragment_vault"
+        android:label="@string/vault"
         tools:layout="@layout/fragment_vault" />
     <fragment
         android:id="@+id/rsaInfoFragment"
         android:name="com.andrefalar.vaultrsa.ui.rsa_info.RsaInfoFragment"
-        android:label="fragment_rsa_info"
+        android:label="@string/rsa_info"
         tools:layout="@layout/fragment_rsa_info" />
 
 </navigation>

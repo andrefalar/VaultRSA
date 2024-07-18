@@ -5,6 +5,6 @@
     <string name="vault">Vault</string>
     <string name="generator">Generator</string>
     <string name="rsa_info">RSA Info</string>
-    <string name="setting">Settings</string>
+    <string name="settings">Settings</string>
 
 </resources>

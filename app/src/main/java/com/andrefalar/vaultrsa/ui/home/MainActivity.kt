@@ -23,12 +23,19 @@ class MainActivity : AppCompatActivity() {
 
     private fun initUI() {
         initNavigation()
+
     }
 
     private fun initNavigation() {
+        setSupportActionBar(binding.toolbar)
+
         val navHost =
             supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
         navController = navHost.navController
         binding.bottomNavigation.setupWithNavController(navController)
+
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            supportActionBar?.title = destination.label
+        }
     }
 }
