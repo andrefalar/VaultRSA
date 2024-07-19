@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">VaultRSA</string>
+    <string name="app_name">Vault RSA</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <!-- Login text-->
