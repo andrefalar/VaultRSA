@@ -4,17 +4,27 @@
     <color name="white">#FFFFFFFF</color>
     <color name="red">#FF0000</color>
 
-    <!-- Primary Palette -->
-    <color name="primary">#121C24</color>
-    <color name="primaryDark">#F5C754</color>
+    <!-- Backgrounds -->
+    <color name="background">#121C24</color>
+    <color name="secondaryBackground">#29384D</color>
+    <color name="bottomNavBackground">#1C2936</color>
 
-    <!-- Secondary Palette -->
-    <color name="secondary">#F7FAFA</color>
-    <color name="secondaryDark">#29384D</color>
+    <!-- Texts -->
+    <color name="primaryText">#F7FAFA</color>
+    <color name="secondaryText">#8A9EBF</color>
+    <color name="tertiaryText">#000000</color>
 
-    <!-- Neutral Palette -->
-    <color name="textColorPrimary">#F7FAFA</color>
-    <color name="textColorSecondary">#8A9EBF</color>
-    <color name="textColorTertiary">#141C24</color>
+    <!-- Buttons -->
+    <color name="primaryButton">#FFCC00</color>
+    <color name="secondaryButton">#29384D</color>
+
+
+    <!-- highlighters -->
+
+    <color name="yellowHighlighter">#FFCC00</color>
+    <color name="grayHighlighter">#33405C</color>
+
+
+
 
 </resources>

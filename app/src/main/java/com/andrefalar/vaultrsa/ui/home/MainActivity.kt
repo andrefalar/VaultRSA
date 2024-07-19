@@ -29,13 +29,17 @@ class MainActivity : AppCompatActivity() {
     private fun initNavigation() {
         setSupportActionBar(binding.toolbar)
 
+        // Delete the Toolbar default title
+        supportActionBar?.setDisplayShowTitleEnabled(false)
+
         val navHost =
             supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
         navController = navHost.navController
         binding.bottomNavigation.setupWithNavController(navController)
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
-            supportActionBar?.title = destination.label
+            //supportActionBar?.title = destination.label
+            binding.toolbarTitle.text = destination.label
         }
     }
 }
