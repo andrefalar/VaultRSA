@@ -1,7 +1,11 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.VaultRSA" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="android:statusBarColor">@color/yellowHighlighter</item>
+        <item name="android:statusBarColor">@color/background</item>
+    </style>
+    
+    <style name="SplashTheme" parent="Base.Theme.VaultRSA">
+        <item name="android:windowBackground">@drawable/splash_screen</item>
     </style>
 
     <style name="Theme.VaultRSA" parent="Base.Theme.VaultRSA" />

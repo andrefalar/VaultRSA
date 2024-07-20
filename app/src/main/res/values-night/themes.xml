@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.VaultRSA" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="android:statusBarColor">@color/secondaryBackground</item>
+        <item name="android:statusBarColor">@color/background</item>
     </style>
 </resources>
