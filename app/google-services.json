@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "460516695361",
+    "project_id": "vaultrsa-46498",
+    "storage_bucket": "vaultrsa-46498.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:460516695361:android:d76d8ae726d27a3accd5c0",
+        "android_client_info": {
+          "package_name": "com.andrefalar.vaultrsa"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFrLvHX5l0i6H_0vWYJEvtXV62f1B1YDI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
