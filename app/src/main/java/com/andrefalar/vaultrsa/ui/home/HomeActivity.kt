@@ -3,20 +3,24 @@ package com.andrefalar.vaultrsa.ui.home
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.NavController
-import androidx.navigation.NavHost
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.andrefalar.vaultrsa.R
-import com.andrefalar.vaultrsa.databinding.ActivityMainBinding
+import com.andrefalar.vaultrsa.databinding.ActivityHomeBinding
 
-class MainActivity : AppCompatActivity() {
+enum class ProviderType {
+    BASIC
+}
 
-    private lateinit var binding: ActivityMainBinding
+
+class HomeActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityHomeBinding
     private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
         initUI()
     }
@@ -38,7 +42,6 @@ class MainActivity : AppCompatActivity() {
         binding.bottomNavigation.setupWithNavController(navController)
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
-            //supportActionBar?.title = destination.label
             binding.toolbarTitle.text = destination.label
         }
     }

@@ -5,13 +5,15 @@
     <!-- Login text-->
 
     <string name="welcome">Welcome Back</string>
-    <string name="username">Username</string>
+    <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="forgot_pwd">Forgot password?</string>
     <string name="log_in">Log In</string>
-    <string name="sing_up">New user? Sign Up</string>
+    <string name="nu_sing_up">New user? Sign Up</string>
     <string name="biometrics">Use biometrics</string>
 
+    <string name="sing_up_title">Create Account</string>
+    <string name="sing_up">Sing Up</string>
 
 
     <!-- Bottom Nav text-->
