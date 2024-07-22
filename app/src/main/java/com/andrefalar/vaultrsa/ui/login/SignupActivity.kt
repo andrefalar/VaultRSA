@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.andrefalar.vaultrsa.R
@@ -21,6 +22,7 @@ class SignupActivity : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
         binding = ActivitySignupBinding.inflate(layoutInflater)
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
         setContentView(binding.root)
 
         initUI()
@@ -31,13 +33,16 @@ class SignupActivity : AppCompatActivity() {
     }
 
     private fun initListeners() {
+        val userEmail = binding.etEmail.text
+        val userPassword = binding.etPassword.text
+
         binding.btnSingUp.setOnClickListener {
-            if (binding.etEmail.text.isNotEmpty() && binding.etPassword.text.isNotEmpty()) {
+            if (userEmail.isNotEmpty() && userPassword.isNotEmpty()) {
 
                 FirebaseAuth.getInstance()
                     .createUserWithEmailAndPassword(
-                        binding.etEmail.text.toString(),
-                        binding.etPassword.text.toString()
+                        userEmail.toString(),
+                        userPassword.toString()
                     ).addOnCompleteListener {
                         if(it.isSuccessful){
                             goToLogin()

@@ -8,5 +8,9 @@
         <item name="android:windowBackground">@drawable/splash_screen</item>
     </style>
 
+    <style name="HomeTheme" parent="Base.Theme.VaultRSA">
+        <item name="android:statusBarColor">@color/secondaryBackground</item>
+    </style>
+
     <style name="Theme.VaultRSA" parent="Base.Theme.VaultRSA" />
 </resources>

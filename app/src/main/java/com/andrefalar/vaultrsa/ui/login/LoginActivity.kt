@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatDelegate
 import com.andrefalar.vaultrsa.R
 import com.andrefalar.vaultrsa.databinding.ActivityLoginBinding
 import com.andrefalar.vaultrsa.ui.home.HomeActivity
@@ -22,6 +23,7 @@ class LoginActivity : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
         setContentView(binding.root)
 
         initUI()
@@ -35,12 +37,15 @@ class LoginActivity : AppCompatActivity() {
 
     private fun initListeners() {
 
+        val userEmail = binding.etEmail.text
+        val userPassword = binding.etPassword.text
+
         binding.btnLogin.setOnClickListener {
-            if (binding.etEmail.text.isNotEmpty() && binding.etPassword.text.isNotEmpty()) {
+            if (userEmail.isNotEmpty() && userPassword.isNotEmpty()) {
                 FirebaseAuth.getInstance()
                     .signInWithEmailAndPassword(
-                        binding.etEmail.text.toString(),
-                        binding.etPassword.text.toString()
+                        userEmail.toString(),
+                        userPassword.toString()
                     ).addOnCompleteListener {
                         if (it.isSuccessful) {
                             goToHome(it.result?.user?.email ?: "", ProviderType.BASIC)
