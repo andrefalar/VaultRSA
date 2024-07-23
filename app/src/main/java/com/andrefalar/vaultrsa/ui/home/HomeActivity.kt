@@ -1,5 +1,6 @@
 package com.andrefalar.vaultrsa.ui.home
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -10,12 +11,7 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.andrefalar.vaultrsa.R
 import com.andrefalar.vaultrsa.databinding.ActivityHomeBinding
-import com.google.firebase.auth.FirebaseAuth
-
-enum class ProviderType {
-    BASIC
-}
-
+import com.andrefalar.vaultrsa.ui.login.LogoutActivity
 
 class HomeActivity : AppCompatActivity() {
 
@@ -37,6 +33,13 @@ class HomeActivity : AppCompatActivity() {
     private fun initUI() {
         initNavigation()
         initToolbar()
+        initListeners()
+    }
+
+    private fun initListeners() {
+        binding.ivAccount.setOnClickListener {
+            goToLogout()
+        }
     }
 
     private fun initToolbar() {
@@ -45,7 +48,7 @@ class HomeActivity : AppCompatActivity() {
         supportActionBar?.setDisplayShowTitleEnabled(false)
         // Change Toolbar title according the fragment
         navController.addOnDestinationChangedListener { _, destination, _ ->
-            binding.toolbarTitle.text = destination.label
+            binding.toolbar.title = destination.label
         }
     }
 
@@ -57,23 +60,16 @@ class HomeActivity : AppCompatActivity() {
         binding.bottomNavigation.setupWithNavController(navController)
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.menu_main, menu)
-        return true
+
+    private fun goToLogout() {
+        val email = intent.getStringExtra("email")
+        val intent = createLogoutIntent(email)
+        startActivity(intent)
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
-            R.id.action_logout -> {
-                logout()
-                true
-            }
-            else -> super.onOptionsItemSelected(item)
+    private fun createLogoutIntent(email: String?): Intent {
+        return Intent(this,LogoutActivity::class.java).apply {
+            putExtra("email", email)
         }
-    }
-
-    private fun logout() {
-        FirebaseAuth.getInstance().signOut()
-        onBackPressedDispatcher.onBackPressed()
     }
 }

@@ -8,7 +8,6 @@ import androidx.appcompat.app.AppCompatDelegate
 import com.andrefalar.vaultrsa.R
 import com.andrefalar.vaultrsa.databinding.ActivityLoginBinding
 import com.andrefalar.vaultrsa.ui.home.HomeActivity
-import com.andrefalar.vaultrsa.ui.home.ProviderType
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.auth.FirebaseAuth
 
@@ -23,6 +22,7 @@ class LoginActivity : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
+        // Default Dark Mode
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
         setContentView(binding.root)
 
@@ -48,7 +48,7 @@ class LoginActivity : AppCompatActivity() {
                         userPassword.toString()
                     ).addOnCompleteListener {
                         if (it.isSuccessful) {
-                            goToHome(it.result?.user?.email ?: "", ProviderType.BASIC)
+                            goToHome(it.result?.user?.email ?: "")
                         } else {
                             showAlert()
                         }
@@ -57,7 +57,7 @@ class LoginActivity : AppCompatActivity() {
         }
 
         binding.btnNuSignUp.setOnClickListener {
-            goToSingUp()
+            goToSignUp()
         }
     }
 
@@ -69,17 +69,20 @@ class LoginActivity : AppCompatActivity() {
         analytics.logEvent("InitScreen", bundle)
     }
 
-    private fun goToSingUp() {
+    private fun goToSignUp() {
         val intent = Intent(this, SignupActivity::class.java)
         startActivity(intent)
     }
 
-    private fun goToHome(email:String, provider: ProviderType){
-        val intent = Intent(this, HomeActivity::class.java).apply {
-            putExtra("email", email)
-            putExtra("provider", provider.name)
-        }
+    private fun goToHome(email: String) {
+        val intent = createLogoutIntent(email)
         startActivity(intent)
+    }
+
+    private fun createLogoutIntent(email: String?): Intent {
+        return Intent(this,HomeActivity::class.java).apply {
+            putExtra("email", email)
+        }
     }
 
     private fun showAlert() {

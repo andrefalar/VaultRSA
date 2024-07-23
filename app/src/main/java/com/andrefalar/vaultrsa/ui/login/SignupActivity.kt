@@ -2,16 +2,10 @@ package com.andrefalar.vaultrsa.ui.login
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.andrefalar.vaultrsa.R
 import com.andrefalar.vaultrsa.databinding.ActivitySignupBinding
-import com.andrefalar.vaultrsa.ui.home.HomeActivity
-import com.andrefalar.vaultrsa.ui.home.ProviderType
 import com.google.firebase.auth.FirebaseAuth
 
 class SignupActivity : AppCompatActivity() {
@@ -65,7 +59,11 @@ class SignupActivity : AppCompatActivity() {
     }
 
     private fun goToLogin(){
-        val intent = Intent(this,LoginActivity::class.java)
+        val intent = createLoginIntent()
         startActivity(intent)
+    }
+
+    private fun createLoginIntent():Intent{
+        return Intent(this,LoginActivity::class.java)
     }
 }

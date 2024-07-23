@@ -9,13 +9,14 @@
     <string name="password">Password</string>
     <string name="forgot_pwd">Forgot password?</string>
     <string name="log_in">Log In</string>
-    <string name="nu_sing_up">New user? Sign Up</string>
+    <string name="nu_sign_up">New user? Sign Up</string>
     <string name="biometrics">Use biometrics</string>
+    <string name="sign_up_title">Create Account</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="logout">Log Out</string>
+    <string name="logout_title">User Information</string>
+    <string name="account">Account</string>
 
-    <string name="sing_up_title">Create Account</string>
-    <string name="sing_up">Sing Up</string>
-
-    <string name="logout">Log out</string>
 
 
     <!-- Bottom Nav text-->

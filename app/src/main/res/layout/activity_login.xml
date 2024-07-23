@@ -83,7 +83,7 @@
         android:id="@+id/btn_nu_sign_up"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/nu_sing_up"
+        android:text="@string/nu_sign_up"
         android:backgroundTint="@color/secondaryButton"
         android:textColor="@color/primaryText"
         android:padding="16dp"
