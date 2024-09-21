@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.SearchView
-        android:id="@+id/svRegisters"
+        android:id="@+id/svItemsVault"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:iconifiedByDefault="false"
@@ -27,13 +27,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvRegisters"
+        android:id="@+id/rvItemsVault"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/svRegisters" />
+        app:layout_constraintTop_toBottomOf="@id/svItemsVault" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_add"
