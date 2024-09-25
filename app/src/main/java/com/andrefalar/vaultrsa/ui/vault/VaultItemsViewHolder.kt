@@ -3,6 +3,7 @@ package com.andrefalar.vaultrsa.ui.vault
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
@@ -30,6 +31,8 @@ class VaultItemsViewHolder (view: View) : RecyclerView.ViewHolder(view) {
         // Listener para eliminar el ítem
         binding.ivDeleteItem.setOnClickListener {
             onDelete(adapterPosition)
+            Toast.makeText(it.context, "Item eliminado", Toast.LENGTH_SHORT).show()
+            Log.e("Listener", "good")
         }
     }
 
