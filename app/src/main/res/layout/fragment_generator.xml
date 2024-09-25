@@ -3,37 +3,43 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
+    android:gravity="center"
     android:orientation="vertical"
-    android:padding="16dp"
-    android:gravity="center">
+    android:padding="16dp">
 
     <TextView
+        android:id="@+id/tvGeneratedPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/generate_password"
-        android:textSize="18sp"
+        android:layout_marginBottom="28dp"
+        android:text="@string/generated_password"
         android:textColor="@color/primaryText"
-        android:layout_marginBottom="16dp"/>
+        android:textSize="32sp" />
 
-    <Button
-        android:id="@+id/btnGenerate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/generate"
-        android:textColor="@color/tertiaryText"
-        android:backgroundTint="@color/primaryButton"
-        android:layout_marginBottom="16dp"/>
-
-    <EditText
-        android:id="@+id/txtPassword"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/generated_password"
-        android:textColorHint="@color/white"
-        android:inputType="text"
-        android:focusable="false"
-        android:clickable="false"
-        android:background="@android:color/transparent"
-        android:textColor="@android:color/white"
-        android:textSize="16sp"/>
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnGenerate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primaryButton"
+            android:text="@string/generate"
+            android:textColor="@color/tertiaryText"
+            android:layout_marginEnd="16dp"/>
+
+        <Button
+            android:id="@+id/btnCopy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/secondaryButton"
+            android:text="@string/copy"
+            android:textColor="@color/secondaryText" />
+
+    </LinearLayout>
+
+
 </LinearLayout>

@@ -30,7 +30,7 @@ class AddItemDialogFragment : DialogFragment() {
             val password = binding.etPassword.text.toString().trim()
 
             if (site.isEmpty() || username.isEmpty() || password.isEmpty()) {
-                Toast.makeText(requireContext(), "Todos los campos son obligatorios", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "All fields are required", Toast.LENGTH_SHORT).show()
             } else {
                 // Envía los datos al fragmento de origen (VaultFragment)
                 (targetFragment as VaultFragment).addItem(VaultItem(site, username, password))

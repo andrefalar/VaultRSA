@@ -20,19 +20,18 @@ class VaultItemsViewHolder (view: View) : RecyclerView.ViewHolder(view) {
 
         // Listener para copiar el nombre de usuario
         binding.ivCopyUsername.setOnClickListener {
-            copyToClipboard(it.context, "Usuario", vaultItem.userName)
+            copyToClipboard(it.context, "User", vaultItem.userName)
         }
 
         // Listener para copiar la contraseña
         binding.ivCopyPassword.setOnClickListener {
-            copyToClipboard(it.context, "Contraseña", vaultItem.password)
+            copyToClipboard(it.context, "Password", vaultItem.password)
         }
 
         // Listener para eliminar el ítem
         binding.ivDeleteItem.setOnClickListener {
             onDelete(adapterPosition)
-            Toast.makeText(it.context, "Item eliminado", Toast.LENGTH_SHORT).show()
-            Log.e("Listener", "good")
+            Toast.makeText(it.context, "Item removed", Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -40,6 +39,6 @@ class VaultItemsViewHolder (view: View) : RecyclerView.ViewHolder(view) {
         val clipboard = context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
         val clip = ClipData.newPlainText(label, text)
         clipboard.setPrimaryClip(clip)
-        Toast.makeText(context, "$label copiado al portapapeles", Toast.LENGTH_SHORT).show()
+        Toast.makeText(context, "$label copied to clipboard", Toast.LENGTH_SHORT).show()
     }
 }

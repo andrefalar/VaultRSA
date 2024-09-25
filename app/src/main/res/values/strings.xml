@@ -18,9 +18,10 @@
     <string name="account">Account</string>
 
     <!-- Login text-->
-    <string name="generate_password">Generate Password</string>
-    <string name="generate">Generate</string>
     <string name="generated_password">Generated Password</string>
+    <string name="generate">Generate</string>
+    <string name="copy">Copy</string>
+
 
     <!-- Bottom Nav text-->
 

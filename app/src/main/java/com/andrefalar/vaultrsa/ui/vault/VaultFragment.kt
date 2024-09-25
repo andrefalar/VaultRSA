@@ -108,7 +108,6 @@ class VaultFragment : Fragment() {
             db.collection("vaultItems").document(id).collection("items")
                 .whereEqualTo("siteName", vaultItem.siteName)
                 .whereEqualTo("userName", vaultItem.userName)
-                .whereEqualTo("password", vaultItem.password)
                 .get()
                 .addOnSuccessListener { documents ->
                     for (document in documents) {

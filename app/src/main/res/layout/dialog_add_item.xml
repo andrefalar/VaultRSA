@@ -19,7 +19,7 @@
         android:id="@+id/etUsername"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:hint="User"
+        android:hint="User / Email"
         android:textColor="@color/primaryText"
         android:textColorHint="@color/primaryText" />
 
@@ -37,7 +37,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/primaryButton"
-        android:text="Guardar"
+        android:text="Save"
         android:textColor="@color/tertiaryText" />
 
     <Button
@@ -45,6 +45,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/secondaryButton"
-        android:text="Cancelar"
+        android:text="Cancel"
         android:textColor="@color/primaryText" />
 </LinearLayout>
