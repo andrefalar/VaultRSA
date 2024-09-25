@@ -5,7 +5,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.andrefalar.vaultrsa.R
 
-class VaultItemsAdapter (private val vaultItemsList: MutableList<VaultItem>) : RecyclerView.Adapter<VaultItemsViewHolder>() {
+class VaultItemsAdapter(
+    private val vaultItemsList: MutableList<VaultItem> = mutableListOf(),
+    private val vaultFragment: VaultFragment
+) : RecyclerView.Adapter<VaultItemsViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VaultItemsViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_vault, parent, false)
         return VaultItemsViewHolder(view)
@@ -17,7 +20,7 @@ class VaultItemsAdapter (private val vaultItemsList: MutableList<VaultItem>) : R
 
     override fun onBindViewHolder(holder: VaultItemsViewHolder, position: Int) {
         holder.render(vaultItemsList[position]) { positionToDelete ->
-            removeItem(positionToDelete)
+            vaultFragment.deleteItem(vaultItemsList[positionToDelete], positionToDelete) // Usar la referencia correcta
         }
     }
 
@@ -27,8 +30,16 @@ class VaultItemsAdapter (private val vaultItemsList: MutableList<VaultItem>) : R
     }
 
     fun removeItem(position: Int) {
-        vaultItemsList.removeAt(position)
-        notifyItemRemoved(position)
-        notifyItemRangeChanged(position, vaultItemsList.size)
+        if (position >= 0 && position < vaultItemsList.size) {
+            vaultItemsList.removeAt(position)
+            notifyItemRemoved(position)
+            notifyItemRangeChanged(position, vaultItemsList.size)
+        }
+    }
+
+    fun updateItems(items: List<VaultItem>) {
+        vaultItemsList.clear()
+        vaultItemsList.addAll(items)
+        notifyDataSetChanged()
     }
 }
