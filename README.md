@@ -18,15 +18,6 @@ VaultRSA is my first project as an Android developer, created to practice and de
 - **Search Functionality:** Easily find the passwords you need.
 - **Backup and Restore:** Safely backup and restore your encrypted password database.
 
-### Installation
-
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/yourusername/VaultRSA.git
-    ```
-2. Open the project in Android Studio.
-3. Build and run the project on your Android device or emulator.
-
 ### Usage
 
 1. **Add a Password:** Click the '+' button to add a new password. Fill in the required fields and save.
@@ -34,45 +25,9 @@ VaultRSA is my first project as an Android developer, created to practice and de
 3. **Generate Password:** Use the built-in password generator to create strong and unique passwords for your accounts.
 4. **Backup and Restore:** Use the backup and restore feature to keep your password database safe.
 
-### Screenshots
-
-![Home Screen](screenshots/home_screen.png)
-![Add Password](screenshots/add_password.png)
-![Password List](screenshots/password_list.png)
-
 ### Technologies Used
 
 - **Kotlin:** The primary programming language for Android development.
 - **XML:** Used for designing the user interface.
 - **RSA Cryptography:** Ensuring secure storage of passwords.
 
-### Contributing
-
-We welcome contributions from the community! Please follow these steps to contribute:
-
-1. Fork the repository.
-2. Create a new branch:
-    ```bash
-    git checkout -b feature-name
-    ```
-3. Make your changes and commit them:
-    ```bash
-    git commit -m 'Add some feature'
-    ```
-4. Push to the branch:
-    ```bash
-    git push origin feature-name
-    ```
-5. Open a pull request.
-
-### License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-### Contact
-
-For any inquiries, please reach out at [your email].
-
----
-
-Feel free to customize this template further to suit your needs!
